@@ -48,7 +48,7 @@ Response
 ```json
 {
   "tracking_number": "1120MYIDAZGTW9A3",
-  "created_at": "2025-06-27T09:46:59+0000"
+  "created_at": "2025-06-27T09:46:59+00:00"
 }
 ```
 

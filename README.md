@@ -3,6 +3,8 @@
 A Spring Boot-based REST API for generating unique tracking numbers and storing them in MongoDB.  
 Containerized with Docker and orchestrated via Docker Compose for easy deployment.
 
+## Live Application
+This API is live on ``https://tracking-number-app-3g67.onrender.com`` using render as cloud hosting and mongodb atlas as mongodb hosting
 
 ## Prerequisites
 - Java 17+
@@ -21,8 +23,8 @@ Containerized with Docker and orchestrated via Docker Compose for easy deploymen
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-repo/tracking-number-generator.git
-cd tracking-number-generator
+git clone https://github.com/mabdulloh/tracking_number.git
+cd tracking_number
 ```
 
 ### 2. Run Docker Compose
@@ -42,3 +44,11 @@ Example
 curl --request GET \
   --url 'http://localhost:8080/api/next-tracking-number?origin_country_id=MY&destination_country_id=ID&weight=1.234&created_at=2018-11-20T19:29:32+08:00&customer_id=de619854-b59b-425e-9db4-943979e1bd49&customer_name=Redbox Logistic&customer_slug=redbox_logistics'
 ```
+Response
+```json
+{
+  "tracking_number": "1120MYIDAZGTW9A3",
+  "created_at": "2025-06-27T09:46:59+0000"
+}
+```
+

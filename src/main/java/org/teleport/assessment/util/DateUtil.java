@@ -9,7 +9,7 @@ import java.time.OffsetDateTime;
 @UtilityClass
 public class DateUtil {
 
-    private final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZZZZZ");
+    private final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX");
 
     public String fromDate(Timestamp date){
         return DATE_FORMAT.format(date);

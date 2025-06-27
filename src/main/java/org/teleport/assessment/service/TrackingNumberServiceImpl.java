@@ -12,6 +12,7 @@ import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.sql.Timestamp;
 import java.time.Instant;
+import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
 @Service
@@ -79,9 +80,8 @@ public class TrackingNumberServiceImpl implements TrackingNumberService {
     }
 
     private void buildFromCreatedAt(String createdAt, StringBuilder sb) {
-        var localDate = DateUtil.toDate(createdAt).toLocalDateTime();
-        var month = String.valueOf(localDate.getMonthValue());
-        var day = String.valueOf(localDate.getDayOfMonth());
+        var month = createdAt.substring(5, 7);
+        var day = createdAt.substring(8, 10);
         sb.append(month).append(day);
     }
 

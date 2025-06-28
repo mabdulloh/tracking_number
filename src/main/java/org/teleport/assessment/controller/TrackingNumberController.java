@@ -1,5 +1,6 @@
 package org.teleport.assessment.controller;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +17,7 @@ public class TrackingNumberController {
     private final TrackingNumberService trackingNumberService;
 
     @GetMapping(value = "/next-tracking-number")
-    public ResponseEntity<TrackingNumberResponse> generateTrackingNumber(TrackingNumberQueryParams params) {
+    public ResponseEntity<TrackingNumberResponse> generateTrackingNumber(@Valid TrackingNumberQueryParams params) {
         var result = trackingNumberService.generateTrackingNumber(params);
         return ResponseEntity.ok(result);
     }

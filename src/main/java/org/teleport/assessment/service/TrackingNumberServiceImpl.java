@@ -26,9 +26,10 @@ public class TrackingNumberServiceImpl implements TrackingNumberService {
     @Override
     public synchronized TrackingNumberResponse generateTrackingNumber(TrackingNumberQueryParams params) {
         var result = generateAndSave(params);
-        return new TrackingNumberResponse()
-                .setTrackingNumber(result.getTrackingNumber())
-                .setCreatedAt(result.getCreatedAt());
+        return new TrackingNumberResponse(
+                result.getTrackingNumber(),
+                result.getCreatedAt()
+        );
     }
 
     private TrackingNumberEntity generateAndSave(TrackingNumberQueryParams params) {

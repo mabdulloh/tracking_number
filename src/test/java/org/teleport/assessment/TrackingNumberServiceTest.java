@@ -65,7 +65,7 @@ class TrackingNumberServiceTest {
         when(trackingNumberRepository.save(any(TrackingNumberEntity.class))).thenReturn(entity);
         var result = trackingNumberService.generateTrackingNumber(params);
         Assertions.assertNotNull(result);
-        Assertions.assertEquals(trackingNumber, result.getTrackingNumber());
+        Assertions.assertEquals(trackingNumber, result.trackingNumber());
         verify(trackingNumberRepository, times(1)).save(any(TrackingNumberEntity.class));
     }
 }

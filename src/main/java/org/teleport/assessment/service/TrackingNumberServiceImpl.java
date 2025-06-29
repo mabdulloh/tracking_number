@@ -43,6 +43,8 @@ public class TrackingNumberServiceImpl implements TrackingNumberService {
                 .setWeight(params.weight())
                 .setCustomerId(params.customerId())
                 .setRequestedAt(params.createdAt())
+                .setCustomerName(params.customerName())
+                .setCustomerSlug(params.customerSlug())
                 .setCreatedAt(DateUtil.fromDate(Timestamp.from(Instant.now())));
         return trackingNumberRepository.save(newTrackingNumber);
     }

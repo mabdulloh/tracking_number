@@ -26,6 +26,10 @@ public class TrackingNumberEntity {
 
     private String customerId;
 
+    private String customerName;
+
+    private String customerSlug;
+
     private double weight;
 
     private String createdAt;

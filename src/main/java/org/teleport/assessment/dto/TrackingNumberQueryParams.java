@@ -1,4 +1,4 @@
-package org.teleport.assessment.domain;
+package org.teleport.assessment.dto;
 
 import jakarta.validation.constraints.NotNull;
 import org.springframework.web.bind.annotation.BindParam;

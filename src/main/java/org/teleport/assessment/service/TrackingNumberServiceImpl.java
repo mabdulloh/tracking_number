@@ -2,8 +2,8 @@ package org.teleport.assessment.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.teleport.assessment.domain.TrackingNumberQueryParams;
-import org.teleport.assessment.domain.TrackingNumberResponse;
+import org.teleport.assessment.dto.TrackingNumberQueryParams;
+import org.teleport.assessment.dto.TrackingNumberResponse;
 import org.teleport.assessment.entity.TrackingNumberEntity;
 import org.teleport.assessment.repository.TrackingNumberRepository;
 import org.teleport.assessment.util.DateUtil;
